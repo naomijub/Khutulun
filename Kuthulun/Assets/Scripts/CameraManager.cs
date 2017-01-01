@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraManager : MonoBehaviour {
 
 	public Transform target;
-	public float smoothing = 2.0f;
+	public float smoothing = 0.3f;
 
 	Vector3 offset;
 
