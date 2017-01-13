@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour {
 	{
 		if (Instance == null)
 		{
-			DontDestroyOnLoad(gameObject);
+			DontDestroyOnLoad(gameObject.GetComponent<PlayerManager>());
 			Instance = this;
 			PlayerManager.Instance.health = 100;
 			PlayerManager.Instance.exp = 0;
@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour {
 		}
 		else if (Instance != this)
 		{
-			Destroy (gameObject);
+			Destroy (gameObject.GetComponent<PlayerManager>());
 		}
 	}
 
