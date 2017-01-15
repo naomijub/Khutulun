@@ -10,7 +10,6 @@ public class DoorActivator : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D col){
 		Debug.Log ("loading scene");
-		GameManagerScr.setColor (color);
 		SceneManager.LoadScene (sceneIdx); 
 	}
 }

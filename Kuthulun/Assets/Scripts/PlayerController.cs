@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-
 	Rigidbody2D rb2d;
 	Animator anim;
 	enum Dir {up, down, left, right }
@@ -21,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 		float y = Input.GetAxis("Vertical");
 		float x = Input.GetAxis("Horizontal");
 
-		rb2d.velocity = new Vector2 (x * speed * Time.deltaTime, y * speed * Time.deltaTime);
+		rb2d.velocity = new Vector2 (x , y ) * speed * Time.deltaTime;
 
 		Animations (x, y);
 
