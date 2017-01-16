@@ -4,8 +4,6 @@ using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
 
-	public static PlayerManager Instance;
-
 	public int health;
 	public int exp;
 	public int strength;
@@ -17,25 +15,15 @@ public class PlayerManager : MonoBehaviour {
 	public Slider speedSlider;
 
 
-	void Awake ()   
+	void Start ()   
 	{
-		if (Instance == null)
-		{
-			Instance = this;
-			PlayerManager.Instance.health = 100;
-			PlayerManager.Instance.exp = 0;
-			PlayerManager.Instance.strength = 0;
-			PlayerManager.Instance.speed = 0;
-		}
+		Debug.Log (health + " " + GameManagerScr.Instance.health);
+		health = GameManagerScr.Instance.health;
+		exp = GameManagerScr.Instance.exp;
+		strength = GameManagerScr.Instance.strength;
+		speed = GameManagerScr.Instance.speed;
 	}
-
-	// Use this for initialization
-	void Start () {
-		health = PlayerManager.Instance.health;
-		exp = PlayerManager.Instance.exp;
-		strength = PlayerManager.Instance.strength;
-		speed = PlayerManager.Instance.speed;	
-	}
+		
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,10 +33,10 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	void SaveData(){
-		PlayerManager.Instance.health = health;
-		PlayerManager.Instance.exp = exp;
-		PlayerManager.Instance.strength = strength;
-		PlayerManager.Instance.speed = speed;
+		GameManagerScr.Instance.health = health;
+		GameManagerScr.Instance.exp = exp;
+		GameManagerScr.Instance.strength = strength;
+		GameManagerScr.Instance.speed = speed;
 	}
 
 	void UpdateSlider(){

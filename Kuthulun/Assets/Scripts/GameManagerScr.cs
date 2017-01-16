@@ -10,6 +10,11 @@ public class GameManagerScr : MonoBehaviour {
 	Animator anim;
 	Scene currentScene;
 
+	public int health;
+	public int exp;
+	public int strength;
+	public int speed;
+
 	// Use this for initialization
 	void Awake () {
 		go = GameObject.FindGameObjectWithTag ("Player");
@@ -18,6 +23,11 @@ public class GameManagerScr : MonoBehaviour {
 			GameManagerScr.Instance.lastScene = 0;
 			GameManagerScr.Instance.playerPos = go.transform.position;
 			DontDestroyOnLoad (GameManagerScr.Instance);
+
+			GameManagerScr.Instance.health = 100;
+			GameManagerScr.Instance.exp = 0;
+			GameManagerScr.Instance.strength = 0;
+			GameManagerScr.Instance.speed = 0;
 		} 
 	}
 
