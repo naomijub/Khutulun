@@ -21,6 +21,7 @@ public class GameManagerScr : MonoBehaviour {
 		if (Instance == null) {
 			Instance = this;
 			GameManagerScr.Instance.lastScene = 0;
+			Debug.Log (GameManagerScr.Instance.playerPos + " " + go.transform.position);
 			GameManagerScr.Instance.playerPos = go.transform.position;
 			DontDestroyOnLoad (GameManagerScr.Instance);
 
@@ -49,6 +50,11 @@ public class GameManagerScr : MonoBehaviour {
 			go.transform.position = new Vector3 (0f, -1.7f, -1.0f);
 			anim.SetTrigger ("walkUp");
 			GameManagerScr.Instance.lastScene = 2;
+		} else if (currentScene.buildIndex == 3) {
+			go.GetComponent<PlayerController> ().enabled = true;
+			go.transform.position = new Vector3 (5f, 0.25f, -1.0f);
+			anim.SetTrigger ("walkUp");
+			GameManagerScr.Instance.lastScene = 3;
 		}
 	}
 

@@ -17,7 +17,6 @@ public class PlayerManager : MonoBehaviour {
 
 	void Start ()   
 	{
-		Debug.Log (health + " " + GameManagerScr.Instance.health);
 		health = GameManagerScr.Instance.health;
 		exp = GameManagerScr.Instance.exp;
 		strength = GameManagerScr.Instance.strength;
