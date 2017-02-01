@@ -16,10 +16,15 @@ public class FightManagerScr : MonoBehaviour {
 		go.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		go.GetComponent<Animator> ().SetTrigger ("lookRight");
 		go.GetComponent<PlayerFightController> ().enabled = true;
+	}
+
+	void OnTriggerStay2D(){
 		if (currentScene.buildIndex == 1) {
 			go.GetComponent<PlayerController> ().enabled = false;
+			go.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			go.GetComponent<Animator> ().SetTrigger ("lookRight");
+			go.GetComponent<PlayerFightController> ().enabled = true;
 		}
-			
 	}
 
 	void OnTriggerExit2D(){
