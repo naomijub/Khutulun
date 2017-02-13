@@ -27,6 +27,7 @@ public class PlayerFightController : MonoBehaviour {
 		int moveIdx = int.Parse (input) - 1;
 		if (auxMoves [moveIdx].Available) {
 			Move (auxMoves[moveIdx].AnimName);
+			UpdateStats (moveIdx);
 		}
 	}
 
@@ -35,4 +36,34 @@ public class PlayerFightController : MonoBehaviour {
 		anim.SetTrigger (triggerName);
 	}
 
+	private void UpdateStats(int moveIdx){
+		UpdateStrength (moveIdx);
+		UpdateSpeed (moveIdx);
+	}
+
+	private void UpdateSpeed(int moveIdx){
+		if (moveIdx == 1 || moveIdx == 3 || moveIdx == 4) {
+			if (gameObject.GetComponent<PlayerManager> ().speed < 100) {
+				gameObject.GetComponent<PlayerManager> ().speed += moveIdx * 2;
+			} else {
+				if (gameObject.GetComponent<PlayerManager> ().exp < 100) {
+					gameObject.GetComponent<PlayerManager> ().speed = gameObject.GetComponent<PlayerManager> ().exp;
+					gameObject.GetComponent<PlayerManager> ().exp += 3;
+				}
+			}
+		}
+	}
+
+	private void UpdateStrength(int moveIdx){
+		if (moveIdx == 0 || moveIdx == 2 || moveIdx == 4) {
+			if (gameObject.GetComponent<PlayerManager> ().strength < 100) {
+				gameObject.GetComponent<PlayerManager> ().strength += (moveIdx + 1) * 2;
+			} else {
+				if (gameObject.GetComponent<PlayerManager> ().exp < 100) {
+					gameObject.GetComponent<PlayerManager> ().strength = gameObject.GetComponent<PlayerManager> ().exp;
+					gameObject.GetComponent<PlayerManager> ().exp += 3;
+				}
+			}
+		}
+	}
 }

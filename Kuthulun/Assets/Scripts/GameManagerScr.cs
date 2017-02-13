@@ -16,8 +16,7 @@ public class GameManagerScr : MonoBehaviour {
 	public int speed;
 
 	// Use this for initialization
-	void Awake () {
-		go = GameObject.FindGameObjectWithTag ("Player");
+	void Awake () { 
 		if (Instance == null) {
 			Instance = this;
 			GameManagerScr.Instance.lastScene = 0;
@@ -45,7 +44,7 @@ public class GameManagerScr : MonoBehaviour {
 		} else if (currentScene.buildIndex == 1) {
 			go.GetComponent<PlayerController> ().enabled = false;
 			go.GetComponent<PlayerFightController> ().enabled = true;
-			go.transform.position = new Vector3 (-4.5f, 1.7f, -1.0f);
+			transform.position = new Vector3 (-4.5f, 1.7f, -1.0f);
 			GameManagerScr.Instance.lastScene = 1;
 		} else if (currentScene.buildIndex == 2) {
 			go.GetComponent<PlayerController> ().enabled = true;
