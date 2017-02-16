@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerFightController : MonoBehaviour {
 	Animator anim;
 	public GameObject gameManager;
+	public GameObject EnemyObj;
 	List<Move> auxMoves;
+	Scene currentScene;
 
 	// Use this for initialization
 	void Awake () {
 		anim = GetComponent<Animator>();
 	    auxMoves = gameManager.GetComponent<MovesList> ().moves;
+	}
+
+	void Start(){
+		currentScene = SceneManager.GetActiveScene ();
 	}
 
 	void Update(){
@@ -26,8 +33,13 @@ public class PlayerFightController : MonoBehaviour {
 	void MakeMove(string input){
 		int moveIdx = int.Parse (input) - 1;
 		if (auxMoves [moveIdx].Available) {
-			Move (auxMoves[moveIdx].AnimName);
-			UpdateStats (moveIdx);
+			if (currentScene.buildIndex == 4) {
+				Move (auxMoves [moveIdx].AnimName);
+				UpdateStats (moveIdx);
+			} else {
+				Move (auxMoves [moveIdx].AnimName);
+				EnemyObj.GetComponent<EnemyManager> ().TakeDamage (auxMoves [moveIdx].Damage);
+			}
 		}
 	}
 

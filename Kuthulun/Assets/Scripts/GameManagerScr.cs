@@ -42,6 +42,7 @@ public class GameManagerScr : MonoBehaviour {
 			anim.SetTrigger ("walkDown");
 			GameManagerScr.Instance.lastScene = 0;
 		} else if (currentScene.buildIndex == 1) {
+			//Miyagi Ring
 			go.GetComponent<PlayerController> ().enabled = false;
 			go.GetComponent<PlayerFightController> ().enabled = true;
 			transform.position = new Vector3 (-4.5f, 1.7f, -1.0f);
