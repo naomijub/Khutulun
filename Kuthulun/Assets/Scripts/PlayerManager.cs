@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour {
 
@@ -43,5 +44,19 @@ public class PlayerManager : MonoBehaviour {
 		expSlider.value = exp;
 		strengthSlider.value = strength;
 		speedSlider.value = speed;
+	}
+
+	public void TakeDamage(int damage){
+		Debug.Log ("Player should take damage:" + damage);
+		health -= damage;
+		UpdateSlider ();
+		SaveData ();
+		ManageLife ();
+	}
+
+	public void ManageLife(){
+		if (health <= 0) {
+			SceneManager.LoadScene (1);
+		} 
 	}
 }

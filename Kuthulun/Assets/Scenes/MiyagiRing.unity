@@ -754,7 +754,8 @@ Transform:
   m_LocalPosition: {x: 4.09, y: 1.86, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 923633287}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!114 &483161473
@@ -770,6 +771,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthSlider: {fileID: 967171007}
+  auxMoves:
+  - {fileID: 547751085}
+  player: {fileID: 801419910}
 --- !u!95 &483161474
 Animator:
   serializedVersion: 3
@@ -982,6 +986,50 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 593151585}
+  m_RootOrder: 0
+--- !u!1 &547751084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 547751086}
+  - 114: {fileID: 547751085}
+  m_Layer: 0
+  m_Name: PunchMiyagi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &547751085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547751084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5aac8b725cc48bcb7b232b8f99edb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Available: 1
+  Name: Punch
+  AnimName: punchMiyagi
+  Damage: 3
+--- !u!4 &547751086
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547751084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 923633287}
   m_RootOrder: 0
 --- !u!1 &574271957
 GameObject:
@@ -1510,6 +1558,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 890551249}
+--- !u!1 &923633286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 923633287}
+  m_Layer: 0
+  m_Name: Moves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &923633287
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923633286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 547751086}
+  m_Father: {fileID: 483161472}
+  m_RootOrder: 0
 --- !u!1 &967171005
 GameObject:
   m_ObjectHideFlags: 0

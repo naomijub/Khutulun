@@ -33,7 +33,7 @@ public class PlayerFightController : MonoBehaviour {
 	void MakeMove(string input){
 		int moveIdx = int.Parse (input) - 1;
 		if (auxMoves [moveIdx].Available) {
-			if (currentScene.buildIndex == 4) {
+			if (currentScene.buildIndex == 3) {
 				Move (auxMoves [moveIdx].AnimName);
 				UpdateStats (moveIdx);
 			} else {

@@ -779,6 +779,11 @@ Prefab:
       propertyPath: speedSlider
       value: 
       objectReference: {fileID: 1138497015}
+    - target: {fileID: 114000011044207234, guid: 837f87922a44740d28de431b6453f610,
+        type: 2}
+      propertyPath: EnemyObj
+      value: 
+      objectReference: {fileID: 200575446}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 837f87922a44740d28de431b6453f610, type: 2}
   m_IsPrefabParent: 0

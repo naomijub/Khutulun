@@ -3037,7 +3037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
-  color: {r: 0.89705884, g: 0.384, b: 0.032980084, a: 0}
 --- !u!1 &187696699
 GameObject:
   m_ObjectHideFlags: 0
@@ -9466,7 +9465,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
-  color: {r: 0.07093425, g: 0.14064544, b: 0.60294116, a: 0}
 --- !u!1 &565836546
 GameObject:
   m_ObjectHideFlags: 0
@@ -10901,7 +10899,6 @@ MonoBehaviour:
   go: {fileID: 1412914006}
   playerPos: {x: 0, y: 0, z: 0}
   lastScene: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
   health: 0
   exp: 0
   strength: 0
@@ -16690,8 +16687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc678715f0db4380b26aab38d8ed177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIdx: 1
-  color: {r: 0.25, g: 0.102738336, b: 0.007352948, a: 0}
+  sceneIdx: 4
 --- !u!1 &1048687367
 GameObject:
   m_ObjectHideFlags: 0
@@ -17059,8 +17055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc678715f0db4380b26aab38d8ed177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIdx: 2
-  color: {r: 0.06666667, g: 0.054901965, b: 0.050980397, a: 0}
+  sceneIdx: 1
 --- !u!1 &1055958161
 GameObject:
   m_ObjectHideFlags: 0
@@ -26264,7 +26259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
-  color: {r: 0.74264705, g: 0.049145762, b: 0.66612273, a: 0}
 --- !u!1 &1613596135
 GameObject:
   m_ObjectHideFlags: 0
@@ -26384,8 +26378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc678715f0db4380b26aab38d8ed177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIdx: 3
-  color: {r: 0, g: 0, b: 0, a: 0}
+  sceneIdx: 2
 --- !u!1 &1619180849
 GameObject:
   m_ObjectHideFlags: 0
@@ -32787,8 +32780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc678715f0db4380b26aab38d8ed177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIdx: 4
-  color: {r: 0, g: 0, b: 0, a: 0}
+  sceneIdx: 3
 --- !u!1 &1972813664
 GameObject:
   m_ObjectHideFlags: 0
@@ -33938,7 +33930,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
-  color: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &2037731762
 GameObject:
   m_ObjectHideFlags: 0
