@@ -2063,6 +2063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 0
+  player: {fileID: 1300005328}
 --- !u!61 &1659027772
 BoxCollider2D:
   m_ObjectHideFlags: 0

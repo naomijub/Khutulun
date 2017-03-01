@@ -27,13 +27,14 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	public void TakeDamage(int damage){
-		health -= damage;
+		health -= damage * (int)Mathf.Sqrt(GameManagerScr.Instance.strength * GameManagerScr.Instance.speed) / (101 - GameManagerScr.Instance.exp);
 		CheckHealth ();
 	}
 
 	public void CheckHealth(){
 		if (health <= 0) {
 			StartCoroutine (DecideMove (2.5f));
+			GameManagerScr.Instance.exp += 5;
 			SceneManager.LoadScene (0);
 		}
 	}

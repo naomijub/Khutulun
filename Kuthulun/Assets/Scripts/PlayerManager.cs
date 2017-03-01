@@ -48,7 +48,7 @@ public class PlayerManager : MonoBehaviour {
 
 	public void TakeDamage(int damage){
 		Debug.Log ("Player should take damage:" + damage);
-		health -= damage;
+		health -= damage * (101 - exp) / 100;
 		UpdateSlider ();
 		SaveData ();
 		ManageLife ();

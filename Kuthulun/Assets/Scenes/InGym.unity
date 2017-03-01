@@ -1866,6 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 0
+  player: {fileID: 715634079}
 --- !u!212 &1702567862
 SpriteRenderer:
   m_ObjectHideFlags: 0

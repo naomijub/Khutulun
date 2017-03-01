@@ -3037,6 +3037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
+  player: {fileID: 0}
 --- !u!1 &187696699
 GameObject:
   m_ObjectHideFlags: 0
@@ -9465,6 +9466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
+  player: {fileID: 0}
 --- !u!1 &565836546
 GameObject:
   m_ObjectHideFlags: 0
@@ -16688,6 +16690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 4
+  player: {fileID: 1412914006}
 --- !u!1 &1048687367
 GameObject:
   m_ObjectHideFlags: 0
@@ -17056,6 +17059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
+  player: {fileID: 1412914006}
 --- !u!1 &1055958161
 GameObject:
   m_ObjectHideFlags: 0
@@ -26259,6 +26263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
+  player: {fileID: 0}
 --- !u!1 &1613596135
 GameObject:
   m_ObjectHideFlags: 0
@@ -26379,6 +26384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 2
+  player: {fileID: 1412914006}
 --- !u!1 &1619180849
 GameObject:
   m_ObjectHideFlags: 0
@@ -32781,6 +32787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 3
+  player: {fileID: 1412914006}
 --- !u!1 &1972813664
 GameObject:
   m_ObjectHideFlags: 0
@@ -33930,6 +33937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIdx: 1
+  player: {fileID: 0}
 --- !u!1 &2037731762
 GameObject:
   m_ObjectHideFlags: 0
