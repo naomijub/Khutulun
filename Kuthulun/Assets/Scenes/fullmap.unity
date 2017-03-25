@@ -10902,9 +10902,9 @@ MonoBehaviour:
   playerPos: {x: 0, y: 0, z: 0}
   lastScene: 0
   health: 0
-  exp: 0
-  strength: 0
-  speed: 0
+  exp: 1
+  strength: 1
+  speed: 1
 --- !u!4 &655534279
 Transform:
   m_ObjectHideFlags: 0

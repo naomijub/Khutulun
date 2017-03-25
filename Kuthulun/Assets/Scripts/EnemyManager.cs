@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour {
 	public Slider healthSlider;
 	public List<Move> auxMoves;
 	public GameObject player;
+	public Canvas speech;
 	Animator anim;
 
 	void Awake(){
@@ -23,12 +24,20 @@ public class EnemyManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		healthSlider.value = health;
-		MakeMove ();
+
 	}
 
 	public void TakeDamage(int damage){
-		health -= damage * (int)Mathf.Sqrt(GameManagerScr.Instance.strength * GameManagerScr.Instance.speed) / (101 - GameManagerScr.Instance.exp);
+		int actualDamage = damage * (int)Mathf.Sqrt(GameManagerScr.Instance.strength * GameManagerScr.Instance.speed) / (101 - GameManagerScr.Instance.exp);
+		if (actualDamage <= 1) {
+			speech.enabled = true;
+			Debug.Log ("Speech should be here");
+		} else {
+			speech.enabled = false;
+		}
+		health -= actualDamage;
 		CheckHealth ();
+		StartCoroutine_Auto (DecideMove (1.4f)); 
 	}
 
 	public void CheckHealth(){
@@ -40,12 +49,9 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	public void MakeMove(){
-		if (Random.Range (0f, 10f) > 9.5f) {
-			int moveIdx = (int)Random.Range (0f, auxMoves.Count); 
-			GiveDamage (moveIdx);
-			MakeMoveAnim (auxMoves [moveIdx].AnimName);
-			StartCoroutine (DecideMove (3.0f));
-		}
+		int moveIdx = (int)Random.Range (0f, auxMoves.Count); 
+		GiveDamage (moveIdx);
+		MakeMoveAnim (auxMoves [moveIdx].AnimName);
 	}
 
 	public void GiveDamage(int moveIdx){
@@ -59,5 +65,8 @@ public class EnemyManager : MonoBehaviour {
 	IEnumerator DecideMove(float time)
 	{
 		yield return new WaitForSeconds (time);
+		Debug.Log ("Enemy enabled");
+		MakeMove ();
+		speech.enabled = false;
 	}
 }

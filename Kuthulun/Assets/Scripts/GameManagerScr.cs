@@ -25,9 +25,9 @@ public class GameManagerScr : MonoBehaviour {
 			DontDestroyOnLoad (GameManagerScr.Instance);
 
 			GameManagerScr.Instance.health = 100;
-			GameManagerScr.Instance.exp = 0;
-			GameManagerScr.Instance.strength = 0;
-			GameManagerScr.Instance.speed = 0;
+			GameManagerScr.Instance.exp = 1;
+			GameManagerScr.Instance.strength = 1;
+			GameManagerScr.Instance.speed = 1;
 		} 
 	}
 

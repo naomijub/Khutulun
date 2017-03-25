@@ -39,8 +39,16 @@ public class PlayerFightController : MonoBehaviour {
 			} else {
 				Move (auxMoves [moveIdx].AnimName);
 				EnemyObj.GetComponent<EnemyManager> ().TakeDamage (auxMoves [moveIdx].Damage);
+				this.enabled = false;
+				StartCoroutine_Auto(Hold (1.5f));
 			}
 		}
+	}
+
+	IEnumerator Hold(float time){
+		yield return new WaitForSeconds (time);
+		this.enabled = true;
+		Debug.Log ("Player enabled");
 	}
 
 
