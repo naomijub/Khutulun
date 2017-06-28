@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class EnemyManager : MonoBehaviour {
 	public int health;
@@ -30,10 +31,10 @@ public class EnemyManager : MonoBehaviour {
 	public void TakeDamage(int damage){
 		int actualDamage = damage * (int)Mathf.Sqrt(GameManagerScr.Instance.strength * GameManagerScr.Instance.speed) / (101 - GameManagerScr.Instance.exp);
 		if (actualDamage <= 1) {
-			speech.enabled = true;
+			speechControl(true);
 			Debug.Log ("Speech should be here");
 		} else {
-			speech.enabled = false;
+			speechControl(false);		
 		}
 		health -= actualDamage;
 		CheckHealth ();
@@ -49,7 +50,7 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	public void MakeMove(){
-		int moveIdx = (int)Random.Range (0f, auxMoves.Count); 
+		int moveIdx = (int)UnityEngine.Random.Range (0f, auxMoves.Count); 
 		GiveDamage (moveIdx);
 		MakeMoveAnim (auxMoves [moveIdx].AnimName);
 	}
@@ -67,6 +68,14 @@ public class EnemyManager : MonoBehaviour {
 		yield return new WaitForSeconds (time);
 		Debug.Log ("Enemy enabled");
 		MakeMove ();
-		speech.enabled = false;
+		speechControl(false);
+	}
+
+	void speechControl(bool isEnable)
+	{
+		if (speech != null)
+			{
+				speech.enabled = isEnable;
+			}
 	}
 }

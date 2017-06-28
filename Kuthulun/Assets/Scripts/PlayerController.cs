@@ -27,16 +27,16 @@ public class PlayerController : MonoBehaviour {
 	}
 		
 	public void Animations(float x, float y){
-		if (y < 0 && x == 0 && dir != Dir.down) {
+		if (y < 0f && x == 0f && dir != Dir.down) {
 			anim.SetTrigger ("walkDown");
 			dir = Dir.down;
-		} else if (y > 0 && x == 0 && dir != Dir.up) {
+		} else if (y > 0f && x == 0f && dir != Dir.up) {
 			anim.SetTrigger ("walkUp");
 			dir = Dir.up;
-		} else if (x > 0 && y == 0 && dir != Dir.right) {
+		} else if (x > 0f && y == 0f && dir != Dir.right) {
 			anim.SetTrigger ("walkRight");
 			dir = Dir.right;
-		} else if (x < 0 && y == 0 && dir != Dir.left) {
+		} else if (x < 0f && y == 0f && dir != Dir.left) {
 			anim.SetTrigger ("walkLeft");
 			dir = Dir.left;
 		}

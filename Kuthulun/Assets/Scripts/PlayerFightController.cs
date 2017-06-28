@@ -56,12 +56,12 @@ public class PlayerFightController : MonoBehaviour {
 		anim.SetTrigger (triggerName);
 	}
 
-	private void UpdateStats(int moveIdx){
+	void UpdateStats(int moveIdx){
 		UpdateStrength (moveIdx);
 		UpdateSpeed (moveIdx);
 	}
 
-	private void UpdateSpeed(int moveIdx){
+	void UpdateSpeed(int moveIdx){
 		if (moveIdx == 1 || moveIdx == 3 || moveIdx == 4) {
 			if (gameObject.GetComponent<PlayerManager> ().speed < 100) {
 				gameObject.GetComponent<PlayerManager> ().speed += moveIdx * 2;
@@ -74,7 +74,7 @@ public class PlayerFightController : MonoBehaviour {
 		}
 	}
 
-	private void UpdateStrength(int moveIdx){
+	void UpdateStrength(int moveIdx){
 		if (moveIdx == 0 || moveIdx == 2 || moveIdx == 4) {
 			if (gameObject.GetComponent<PlayerManager> ().strength < 100) {
 				gameObject.GetComponent<PlayerManager> ().strength += (moveIdx + 1) * 2;

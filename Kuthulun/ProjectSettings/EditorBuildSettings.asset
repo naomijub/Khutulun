@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/MiyagiRing.unity
   - enabled: 1
     path: Assets/Scenes/YenRing.unity
+  - enabled: 1
+    path: Assets/Scenes/ChanRing.unity
